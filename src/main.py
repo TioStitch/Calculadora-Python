@@ -2,6 +2,7 @@ first = int(input("Insira o valor do primeiro número:"))
 second = int(input("Insira o valor do segundo número:"))
 
 print("Por favor, escolha o calculo realizado: " )
+
 printar = [
     "1. +"
     "2. -"
@@ -9,21 +10,19 @@ printar = [
     "4. /"
     "5. %"
 ]
+
+calc = {
+    1: first + second,
+    2: first - second,
+    3: first * second,
+    4: first / second,
+    5: first % second
+}
+
 print(printar)
+
 equation = int(input("Apenas insira o digito do calculo."))
-match(equation):
-    case 1:
-        print("Resultado: " + str(first+second))
-        breakpoint
-    case 2:
-        print("Resultado: " + str(first-second))
-        breakpoint
-    case 3:
-        print("Resultado: " + str(first*second))
-        breakpoint
-    case 4:
-        print("Resultado: " + str(first/second))
-        breakpoint
-    case 5:
-        print("Resultado: " + str(first%second))
-        breakpoint
+
+result = calc[equation]
+
+print(f'Resultado: {result}')
